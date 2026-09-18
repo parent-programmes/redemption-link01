@@ -22,6 +22,11 @@
 
 <title>Grow Well SG – Token of Appreciation</title>
 
+<!-- Rounded / friendly heading font -->
+<link
+  href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&display=swap"
+  rel="stylesheet"
+>
 
 <style>
 
@@ -38,9 +43,9 @@
   --purple:#7451a6;
 
   --rounded:
+    "Baloo 2",
     "Arial Rounded MT Bold",
     "Trebuchet MS",
-    ui-rounded,
     Arial,
     sans-serif;
 
@@ -168,10 +173,9 @@ body::after {
 }
 
 
-
-/* ==========================================
+/* ==============================
    HEADER
-========================================== */
+============================== */
 
 .hero {
 
@@ -217,9 +221,9 @@ body::after {
       .94rem
     );
 
-  font-weight:900;
+  font-weight:800;
 
-  letter-spacing:.12em;
+  letter-spacing:.10em;
 
   line-height:1.4;
 
@@ -227,10 +231,9 @@ body::after {
 }
 
 
-
-/* ==========================================
-   PURPLE MAIN HEADING
-========================================== */
+/* ==============================
+   PURPLE CURVY HEADING
+============================== */
 
 h1 {
 
@@ -245,22 +248,22 @@ h1 {
 
   font-size:
     clamp(
-      2.6rem,
+      2.8rem,
       6vw,
-      5rem
+      5.2rem
     );
 
-  font-weight:900;
+  font-weight:800;
 
-  letter-spacing:-.045em;
+  letter-spacing:-.03em;
 
-  line-height:1;
+  line-height:.95;
 
   text-wrap:balance;
 
   text-shadow:
     0 3px 0
-    rgba(116,81,166,.07);
+    rgba(116,81,166,.06);
 }
 
 
@@ -306,10 +309,9 @@ h1 {
 }
 
 
-
-/* ==========================================
+/* ==============================
    SINGLE GIFT CARD
-========================================== */
+============================== */
 
 .actions {
 
@@ -466,10 +468,9 @@ h1 {
 }
 
 
-
-/* ==========================================
+/* ==============================
    GIFT ICON
-========================================== */
+============================== */
 
 .icon-wrap {
 
@@ -496,10 +497,9 @@ h1 {
 }
 
 
-
-/* ==========================================
-   REDEEM NOW TEXT
-========================================== */
+/* ==============================
+   REDEEM NOW
+============================== */
 
 .redeem-text {
 
@@ -512,16 +512,16 @@ h1 {
 
   font-size:
     clamp(
-      2.2rem,
-      4.5vw,
-      3.3rem
+      2.5rem,
+      5vw,
+      3.7rem
     );
 
-  font-weight:900;
+  font-weight:800;
 
-  letter-spacing:-.025em;
+  letter-spacing:-.02em;
 
-  line-height:1.08;
+  line-height:1;
 
   transition:
     transform .18s ease;
@@ -531,14 +531,13 @@ h1 {
 .gift-card:hover .redeem-text {
 
   transform:
-    scale(1.03);
+    scale(1.04);
 }
 
 
-
-/* ==========================================
+/* ==============================
    FOOTER
-========================================== */
+============================== */
 
 .footer {
 
@@ -563,10 +562,9 @@ h1 {
 }
 
 
-
-/* ==========================================
+/* ==============================
    MOBILE
-========================================== */
+============================== */
 
 @media(max-width:720px) {
 
@@ -598,9 +596,9 @@ h1 {
 
     font-size:
       clamp(
-        2.35rem,
+        2.5rem,
         12vw,
-        3.6rem
+        3.8rem
       );
   }
 
@@ -636,14 +634,13 @@ h1 {
 
     font-size:
       clamp(
-        2rem,
-        9vw,
-        2.7rem
+        2.2rem,
+        10vw,
+        3rem
       );
   }
 
 }
-
 
 
 @media(prefers-reduced-motion:reduce) {
@@ -661,7 +658,6 @@ h1 {
 </style>
 
 </head>
-
 
 
 <body>
@@ -689,13 +685,11 @@ h1 {
 </p>
 
 
-
 <h1>
 
   Redeem your token of appreciation
 
 </h1>
-
 
 
 <p class="subtitle">
@@ -718,17 +712,11 @@ h1 {
 </header>
 
 
-
 <section
   class="actions"
   aria-label="Redeem your gift"
 >
 
-
-<!--
-  THE WHOLE BOX IS CLICKABLE
-  AND OPENS THE E-BOOK
--->
 
 <a
   class="gift-card"
@@ -738,8 +726,6 @@ h1 {
   aria-label="Redeem now"
 >
 
-
-<!-- GIFT ICON -->
 
 <div
   class="icon-wrap"
@@ -807,9 +793,6 @@ h1 {
 </div>
 
 
-
-<!-- REDEMPTION TEXT -->
-
 <p class="redeem-text">
 
   Redeem Now
@@ -821,7 +804,6 @@ h1 {
 
 
 </section>
-
 
 
 <footer class="footer">
