@@ -36,10 +36,17 @@
   --teal:#00aaa6;
   --yellow:#f4cc09;
 
+  /* Purple used for the main heading */
+  --purple:#7451a6;
+
+  /*
+    Rounded, friendly font stack.
+    No external font download is required.
+  */
   --rounded:
-    ui-rounded,
     "Arial Rounded MT Bold",
     "Trebuchet MS",
+    ui-rounded,
     Arial,
     sans-serif;
 
@@ -167,17 +174,18 @@ body::after {
 }
 
 
+
 /* ==========================================
    HEADER
 ========================================== */
 
 .hero {
 
-  max-width:880px;
+  max-width:900px;
 
   margin:
     0 auto
-    clamp(34px,5vw,54px);
+    clamp(36px,5vw,52px);
 
   text-align:center;
 }
@@ -194,14 +202,14 @@ body::after {
   height:auto;
 
   margin:
-    0 auto 24px;
+    0 auto 26px;
 }
 
 
 .eyebrow {
 
   margin:
-    0 0 12px;
+    0 0 14px;
 
   color:#008f8b;
 
@@ -225,29 +233,48 @@ body::after {
 }
 
 
+
+/* ==========================================
+   PURPLE CURVY MAIN HEADING
+========================================== */
+
 h1 {
 
   max-width:850px;
 
   margin:0 auto;
 
+  color:var(--purple);
+
   font-family:
     var(--rounded);
 
   font-size:
     clamp(
-      2.45rem,
+      2.6rem,
       6vw,
-      4.8rem
+      5rem
     );
 
   font-weight:900;
 
   letter-spacing:-.045em;
 
-  line-height:.98;
+  line-height:1;
 
   text-wrap:balance;
+}
+
+
+/*
+  Slight soft shadow gives it a warmer,
+  campaign-style appearance.
+*/
+
+h1 {
+  text-shadow:
+    0 3px 0
+    rgba(116,81,166,.07);
 }
 
 
@@ -256,7 +283,7 @@ h1 {
   max-width:760px;
 
   margin:
-    20px auto 0;
+    22px auto 0;
 
   color:var(--muted);
 
@@ -293,8 +320,9 @@ h1 {
 }
 
 
+
 /* ==========================================
-   SINGLE REDEMPTION CARD
+   SINGLE GIFT CARD
 ========================================== */
 
 .actions {
@@ -309,7 +337,7 @@ h1 {
 }
 
 
-.action-card {
+.gift-card {
 
   --accent:var(--pink);
   --soft:rgba(244,22,62,.07);
@@ -317,19 +345,22 @@ h1 {
 
   position:relative;
 
-  display:grid;
+  display:flex;
 
-  width:min(100%,590px);
+  width:min(100%,650px);
 
-  min-height:270px;
+  min-height:285px;
 
-  grid-template-rows:
-    auto 1fr auto;
+  flex-direction:column;
 
-  gap:18px;
+  align-items:center;
+
+  justify-content:center;
+
+  gap:20px;
 
   padding:
-    32px 30px 26px;
+    38px 32px;
 
   overflow:hidden;
 
@@ -337,11 +368,13 @@ h1 {
     2px solid
     var(--accent);
 
-  border-radius:32px;
+  border-radius:34px;
 
   color:var(--ink);
 
   text-decoration:none;
+
+  text-align:center;
 
   background:
 
@@ -358,6 +391,8 @@ h1 {
 
   isolation:isolate;
 
+  cursor:pointer;
+
   transition:
     transform .18s ease,
     box-shadow .18s ease;
@@ -367,19 +402,19 @@ h1 {
 }
 
 
-.action-card::before {
+.gift-card::before {
 
   position:absolute;
 
   z-index:-1;
 
-  top:-58px;
+  top:-64px;
 
-  right:-48px;
+  right:-52px;
 
-  width:155px;
+  width:170px;
 
-  height:155px;
+  height:170px;
 
   border-radius:50%;
 
@@ -393,22 +428,22 @@ h1 {
 }
 
 
-.action-card::after {
+.gift-card::after {
 
   position:absolute;
 
   z-index:-1;
 
-  bottom:-54px;
+  bottom:-60px;
 
-  left:-40px;
+  left:-46px;
 
-  width:105px;
+  width:115px;
 
-  height:105px;
+  height:115px;
 
   border:
-    19px solid
+    20px solid
     var(--soft);
 
   border-radius:50%;
@@ -417,25 +452,25 @@ h1 {
 }
 
 
-.action-card:hover {
+.gift-card:hover {
 
   transform:
     translateY(-7px);
 
   box-shadow:
-    0 24px 54px
-    rgba(48,48,54,.14);
+    0 26px 58px
+    rgba(48,48,54,.15);
 }
 
 
-.action-card:hover::before {
+.gift-card:hover::before {
 
   transform:
     scale(1.12);
 }
 
 
-.action-card:focus-visible {
+.gift-card:focus-visible {
 
   outline:
     4px solid
@@ -445,84 +480,44 @@ h1 {
 }
 
 
+
+/* ==========================================
+   GIFT ICON
+========================================== */
+
 .icon-wrap {
 
   display:grid;
 
-  width:84px;
-  height:84px;
+  width:92px;
+  height:92px;
 
   place-items:center;
 
-  border-radius:24px;
+  border-radius:26px;
 
-  background:var(--soft);
+  background:
+    rgba(244,22,62,.07);
 }
 
 
 .icon {
 
-  width:62px;
-  height:62px;
+  width:66px;
+  height:66px;
 
   overflow:visible;
 }
 
 
-.card-title {
+
+/* ==========================================
+   NEW LARGE CARD TEXT
+========================================== */
+
+.redeem-text {
 
   margin:0;
-
-  font-family:
-    var(--rounded);
-
-  font-size:
-    clamp(
-      1.9rem,
-      3.5vw,
-      2.6rem
-    );
-
-  font-weight:900;
-
-  letter-spacing:-.035em;
-
-  line-height:1.05;
-}
-
-
-.card-copy {
-
-  margin:
-    12px 0 0;
-
-  color:var(--muted);
-
-  font-size:
-    1.05rem;
-
-  font-weight:700;
-
-  line-height:1.5;
-}
-
-
-.card-footer {
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:
-    space-between;
-
-  gap:12px;
-
-  margin-top:4px;
-}
-
-
-.cta {
 
   color:var(--pink);
 
@@ -530,46 +525,38 @@ h1 {
     var(--rounded);
 
   font-size:
-    .95rem;
+    clamp(
+      2rem,
+      4vw,
+      3rem
+    );
 
   font-weight:900;
+
+  letter-spacing:-.025em;
+
+  line-height:1.08;
 }
 
 
-.arrow {
 
-  display:inline-grid;
+/* ==========================================
+   SMALL HOVER HINT
+========================================== */
 
-  width:40px;
-  height:40px;
+.gift-card:hover .redeem-text {
 
-  place-items:center;
+  transform:
+    scale(1.02);
+}
 
-  border-radius:50%;
 
-  color:#ffffff;
-
-  background:
-    var(--pink);
-
-  font-size:1.15rem;
-
-  font-weight:900;
-
-  box-shadow:
-    0 8px 18px
-    rgba(244,22,62,.16);
+.redeem-text {
 
   transition:
     transform .18s ease;
 }
 
-
-.action-card:hover .arrow {
-
-  transform:
-    translate(2px,-2px);
-}
 
 
 /* ==========================================
@@ -580,9 +567,9 @@ h1 {
 
   margin-top:
     clamp(
-      38px,
+      40px,
       6vw,
-      60px
+      62px
     );
 
   padding-top:18px;
@@ -597,6 +584,7 @@ h1 {
 
   text-align:center;
 }
+
 
 
 /* ==========================================
@@ -629,33 +617,56 @@ h1 {
   }
 
 
-  .action-card {
+  h1 {
 
-    min-height:235px;
+    font-size:
+      clamp(
+        2.35rem,
+        12vw,
+        3.6rem
+      );
+  }
+
+
+  .gift-card {
+
+    min-height:245px;
 
     padding:
-      25px 22px 21px;
+      30px 22px;
 
-    border-radius:27px;
+    border-radius:28px;
   }
 
 
   .icon-wrap {
 
-    width:72px;
-    height:72px;
+    width:80px;
+    height:80px;
 
-    border-radius:20px;
+    border-radius:22px;
   }
 
 
   .icon {
 
-    width:54px;
-    height:54px;
+    width:58px;
+    height:58px;
+  }
+
+
+  .redeem-text {
+
+    font-size:
+      clamp(
+        1.85rem,
+        8vw,
+        2.5rem
+      );
   }
 
 }
+
 
 
 @media(prefers-reduced-motion:reduce) {
@@ -675,6 +686,7 @@ h1 {
 </head>
 
 
+
 <body>
 
 
@@ -685,24 +697,30 @@ h1 {
 
 
 <!-- ==========================================
-     GROW WELL SG LOGO
+     OFFICIAL GROW WELL SG LOGO
 ========================================== -->
 
 <img
   class="logo"
   alt="Grow Well SG logo"
-  src="data:image/webp;base64,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"
+  src="https://ch-api.healthhub.sg/api/public/content/24908b7d99c6494b8bfec7da596157c6?v=d7bd063e"
 >
 
 
 <p class="eyebrow">
+
   GOT 10 MINUTES? LET’S GROW WELL TOGETHER!
+
 </p>
 
 
+
 <h1>
+
   Redeem your token of appreciation
+
 </h1>
+
 
 
 <p class="subtitle">
@@ -728,22 +746,26 @@ h1 {
 
 <section
   class="actions"
-  aria-label="Redeem your token of appreciation"
+  aria-label="Redeem your gift"
 >
 
 
 <!-- ==========================================
      SINGLE REDEMPTION BOX
+
+     The whole box links to the e-book.
 ========================================== -->
 
 <a
-  class="action-card"
+  class="gift-card"
   href="https://go.gov.sg/e-book"
   target="_blank"
   rel="noopener noreferrer"
-  aria-label="Redeem your token of appreciation"
+  aria-label="Tap to redeem your gift"
 >
 
+
+<!-- GIFT ICON -->
 
 <div
   class="icon-wrap"
@@ -811,39 +833,14 @@ h1 {
 </div>
 
 
-<div>
 
+<!-- ONLY TEXT INSIDE CARD -->
 
-<h2 class="card-title">
-  Redeem your token of appreciation
-</h2>
+<p class="redeem-text">
 
+  Tap to redeem your gift
 
-<p class="card-copy">
-  Tap here to receive your Grow Well SG e-book.
 </p>
-
-
-</div>
-
-
-<div class="card-footer">
-
-
-<span class="cta">
-  Redeem now
-</span>
-
-
-<span
-  class="arrow"
-  aria-hidden="true"
->
-  ↗
-</span>
-
-
-</div>
 
 
 </a>
