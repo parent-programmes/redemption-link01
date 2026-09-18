@@ -35,14 +35,8 @@
   --orange:#f58a1f;
   --teal:#00aaa6;
   --yellow:#f4cc09;
-
-  /* Purple used for the main heading */
   --purple:#7451a6;
 
-  /*
-    Rounded, friendly font stack.
-    No external font download is required.
-  */
   --rounded:
     "Arial Rounded MT Bold",
     "Trebuchet MS",
@@ -235,7 +229,7 @@ body::after {
 
 
 /* ==========================================
-   PURPLE CURVY MAIN HEADING
+   PURPLE MAIN HEADING
 ========================================== */
 
 h1 {
@@ -263,15 +257,7 @@ h1 {
   line-height:1;
 
   text-wrap:balance;
-}
 
-
-/*
-  Slight soft shadow gives it a warmer,
-  campaign-style appearance.
-*/
-
-h1 {
   text-shadow:
     0 3px 0
     rgba(116,81,166,.07);
@@ -512,7 +498,7 @@ h1 {
 
 
 /* ==========================================
-   NEW LARGE CARD TEXT
+   REDEEM NOW TEXT
 ========================================== */
 
 .redeem-text {
@@ -526,9 +512,9 @@ h1 {
 
   font-size:
     clamp(
-      2rem,
-      4vw,
-      3rem
+      2.2rem,
+      4.5vw,
+      3.3rem
     );
 
   font-weight:900;
@@ -536,25 +522,16 @@ h1 {
   letter-spacing:-.025em;
 
   line-height:1.08;
+
+  transition:
+    transform .18s ease;
 }
 
-
-
-/* ==========================================
-   SMALL HOVER HINT
-========================================== */
 
 .gift-card:hover .redeem-text {
 
   transform:
-    scale(1.02);
-}
-
-
-.redeem-text {
-
-  transition:
-    transform .18s ease;
+    scale(1.03);
 }
 
 
@@ -659,9 +636,9 @@ h1 {
 
     font-size:
       clamp(
-        1.85rem,
-        8vw,
-        2.5rem
+        2rem,
+        9vw,
+        2.7rem
       );
   }
 
@@ -696,9 +673,7 @@ h1 {
 <header class="hero">
 
 
-<!-- ==========================================
-     OFFICIAL GROW WELL SG LOGO
-========================================== -->
+<!-- GROW WELL SG LOGO -->
 
 <img
   class="logo"
@@ -750,18 +725,17 @@ h1 {
 >
 
 
-<!-- ==========================================
-     SINGLE REDEMPTION BOX
-
-     The whole box links to the e-book.
-========================================== -->
+<!--
+  THE WHOLE BOX IS CLICKABLE
+  AND OPENS THE E-BOOK
+-->
 
 <a
   class="gift-card"
   href="https://go.gov.sg/e-book"
   target="_blank"
   rel="noopener noreferrer"
-  aria-label="Tap to redeem your gift"
+  aria-label="Redeem now"
 >
 
 
@@ -834,11 +808,11 @@ h1 {
 
 
 
-<!-- ONLY TEXT INSIDE CARD -->
+<!-- REDEMPTION TEXT -->
 
 <p class="redeem-text">
 
-  Tap to redeem your gift
+  Redeem Now
 
 </p>
 
