@@ -52,7 +52,7 @@
 <style>
 
 :root {
-
+  --logo-bg:#fef8f1;
   --cream:#fff4e6;
   --cream-dark:#f9e7cf;
 
@@ -135,19 +135,32 @@ body {
    TOP AREA
 ========================================== */
 
-.hero {
+.hero-band {
 
-  max-width:980px;
+  width:100%;
 
-  margin:
-    0 auto
-    clamp(42px,6vw,70px);
-
-  text-align:center;
+  background:var(--logo-bg);
 }
 
 
-/* Grow Well SG logo */
+.hero {
+
+  width:min(
+    1180px,
+    calc(100% - 36px)
+  );
+
+  max-width:980px;
+
+  margin:0 auto;
+
+  padding:
+    clamp(34px,5vw,58px)
+    0
+    clamp(40px,5vw,58px);
+
+  text-align:center;
+}
 
 .logo {
 
