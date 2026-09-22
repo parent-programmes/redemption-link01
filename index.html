@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="en-SG">
 
 <head>
@@ -6,22 +7,33 @@
 <meta charset="utf-8">
 
 <meta
-  name="viewport"
-  content="width=device-width, initial-scale=1"
->
+name="viewport"
+content="width=device-width, initial-scale=1"
+
+
 
 <meta
-  name="theme-color"
-  content="#fef8f1"
->
+name="theme-color"
+content="#fff4e6"
+
+
 
 <meta
-  name="description"
-  content="Redeem your Grow Well SG token of appreciation."
->
+name="description"
+content="Redeem your Grow Well SG token of appreciation."
+
+
 
 <title>Grow Well SG – Token of Appreciation</title>
 
+<!--
+  Lilita One:
+  chunky/playful heading style similar to the
+  Grow Well SG campaign screenshots.
+
+  Nunito Sans:
+  softer rounded body copy.
+-->
 
 <link
   rel="preconnect"
@@ -39,21 +51,22 @@
   rel="stylesheet"
 >
 
-
 <style>
 
 :root {
 
-  /* Exact background colour sampled from your Got 10 Minutes logo */
-  --logo-bg:#fef8f1;
-
   --cream:#fff4e6;
+  --cream-dark:#f9e7cf;
 
   --ink:#2d2d2d;
   --body:#404040;
 
   --purple:#9146ff;
   --purple-dark:#7833e8;
+
+  --pink:#d49aa3;
+  --yellow:#ffe25b;
+  --teal:#5fc9be;
 
   --title-font:
     "Lilita One",
@@ -93,27 +106,28 @@ body {
 
   font-family:var(--body-font);
 
-  /* No circles / gradients */
-  background:var(--cream);
-}
+  background:
+    radial-gradient(
+      circle at 0% 8%,
+      rgba(95,201,190,.18) 0 110px,
+      transparent 111px
+    ),
 
+    radial-gradient(
+      circle at 100% 10%,
+      rgba(255,226,91,.20) 0 125px,
+      transparent 126px
+    ),
+
+    var(--cream);
+}
 
 
 /* ==========================================
-   TOP SECTION
-   Same colour as Got 10 Minutes logo
+   PAGE
 ========================================== */
 
-.hero-band {
-
-  width:100%;
-
-  background:
-    var(--logo-bg);
-}
-
-
-.hero {
+.page {
 
   width:
     min(
@@ -121,45 +135,81 @@ body {
       calc(100% - 36px)
     );
 
-  max-width:980px;
-
   margin:0 auto;
 
   padding:
-    clamp(34px,5vw,62px)
+    clamp(34px,5vw,66px)
     0
-    clamp(40px,5vw,58px);
+    46px;
+}
+
+
+/* ==========================================
+   TOP AREA
+========================================== */
+
+.hero {
+
+  max-width:980px;
+
+  margin:
+    0 auto
+    clamp(42px,6vw,70px);
 
   text-align:center;
 }
 
 
+/* Grow Well SG logo */
 
-/* ==========================================
-   GOT 10 MINUTES LOGO
-========================================== */
-
-.got10-logo {
+.logo {
 
   display:block;
 
-  width:
-    clamp(
-      210px,
-      24vw,
-      300px
-    );
+  width:118px;
+
+  max-width:30vw;
 
   height:auto;
 
   margin:
-    0 auto 22px;
+    0 auto
+    26px;
 }
 
 
+/*
+  User requested this wording to stay,
+  but now it uses the same campaign-style
+  title font as the main heading.
+*/
+
+.eyebrow {
+
+  margin:
+    0 0 18px;
+
+  color:var(--ink);
+
+  font-family:var(--title-font);
+
+  font-size:
+    clamp(
+      1.15rem,
+      2.1vw,
+      1.65rem
+    );
+
+  font-weight:400;
+
+  letter-spacing:.015em;
+
+  line-height:1.1;
+}
+
 
 /* ==========================================
-   MAIN TITLE
+   MAIN GWSG-STYLE TITLE
 ========================================== */
 
 h1 {
@@ -170,8 +220,7 @@ h1 {
 
   color:var(--ink);
 
-  font-family:
-    var(--title-font);
+  font-family:var(--title-font);
 
   font-size:
     clamp(
@@ -192,12 +241,34 @@ h1 {
 }
 
 
-.discover-copy {
-
-  max-width:820px;
+.thank-you {
 
   margin:
-    24px auto 0;
+    28px 0 0;
+
+  color:var(--body);
+
+  font-size:
+    clamp(
+      1.2rem,
+      2vw,
+      1.55rem
+    );
+
+  font-weight:700;
+}
+
+
+/* ==========================================
+   DISCOVER MORE COPY
+========================================== */
+
+.discover-copy {
+
+  max-width:800px;
+
+  margin:
+    14px auto 0;
 
   color:var(--body);
 
@@ -212,17 +283,28 @@ h1 {
 }
 
 
+.discover-copy strong {
+
+  color:var(--ink);
+
+  font-weight:900;
+}
+
+
 .discover-copy a {
 
   color:var(--purple-dark);
 
   font-weight:900;
 
-  text-decoration:underline;
+  text-decoration:
+    underline;
 
-  text-decoration-thickness:2px;
+  text-decoration-thickness:
+    2px;
 
-  text-underline-offset:4px;
+  text-underline-offset:
+    4px;
 }
 
 
@@ -234,24 +316,14 @@ h1 {
 
 
 /* ==========================================
-   LOWER CREAM SECTION
-========================================== */
-
-.content-section {
-
-  background:
-    var(--cream);
-
-  padding:
-    clamp(44px,6vw,72px)
-    18px
-    52px;
-}
-
-
-
-/* ==========================================
    E-BOOK CARD
+
+   Inspired by the Grow Well SG content cards:
+   - white panel
+   - dark border
+   - offset dark shadow
+   - picture on left
+   - content and purple CTA on right
 ========================================== */
 
 .gift-card {
@@ -259,14 +331,10 @@ h1 {
   display:grid;
 
   grid-template-columns:
-    minmax(280px,.95fr)
-    minmax(320px,1.05fr);
+    minmax(280px, .95fr)
+    minmax(320px, 1.05fr);
 
-  width:
-    min(
-      1040px,
-      100%
-    );
+  max-width:1040px;
 
   margin:0 auto;
 
@@ -286,9 +354,8 @@ h1 {
 }
 
 
-
 /* ==========================================
-   BOOK SIDE
+   BOOK COVER
 ========================================== */
 
 .book-side {
@@ -314,6 +381,7 @@ h1 {
   display:flex;
 
   width:100%;
+
   height:100%;
 
   align-items:center;
@@ -329,6 +397,7 @@ h1 {
   display:block;
 
   width:100%;
+
   height:100%;
 
   min-height:390px;
@@ -348,11 +417,14 @@ h1 {
 }
 
 
+/* Small label over image */
+
 .book-tag {
 
   position:absolute;
 
   left:22px;
+
   bottom:20px;
 
   padding:
@@ -376,9 +448,8 @@ h1 {
 }
 
 
-
 /* ==========================================
-   RIGHT SIDE
+   RIGHT-HAND COPY
 ========================================== */
 
 .gift-copy {
@@ -398,18 +469,24 @@ h1 {
 }
 
 
+.gift-kicker {
 
-/* ==========================================
-   SMALLER STORY HEADING
+  margin:
+    0 0 8px;
 
-   This is intentionally much smaller than
-   your main title, closer to the GWSG card
-   heading scale in your screenshot.
-========================================== */
+  color:var(--purple);
+
+  font-size:.86rem;
+
+  font-weight:900;
+
+  letter-spacing:.1em;
+
+  text-transform:uppercase;
+}
+
 
 .gift-copy h2 {
-
-  max-width:520px;
 
   margin:0;
 
@@ -420,21 +497,23 @@ h1 {
 
   font-size:
     clamp(
-      1.45rem,
-      2.25vw,
-      2rem
+      2rem,
+      3.5vw,
+      3.15rem
     );
 
   font-weight:400;
 
-  line-height:1.08;
+  line-height:1;
+
+  text-transform:uppercase;
 }
 
 
 .story-copy {
 
   margin:
-    20px 0 0;
+    22px 0 0;
 
   color:var(--body);
 
@@ -449,9 +528,8 @@ h1 {
 }
 
 
-
 /* ==========================================
-   DOWNLOAD BUTTON
+   PURPLE DOWNLOAD BUTTON
 ========================================== */
 
 .download-button {
@@ -534,19 +612,61 @@ h1 {
 
 
 /* ==========================================
+   MORE RESOURCES
+========================================== */
+
+.more-resources {
+
+  margin:
+    26px 0 0;
+
+  padding-top:22px;
+
+  border-top:
+    1px solid
+    #dedede;
+
+  color:#5b5b5b;
+
+  font-size:
+    .98rem;
+
+  line-height:1.55;
+}
+
+
+.more-resources a {
+
+  color:var(--purple-dark);
+
+  font-weight:900;
+
+  text-decoration:
+    underline;
+
+  text-underline-offset:
+    3px;
+}
+
+
+.more-resources a:hover {
+
+  color:var(--purple);
+}
+
+
+
+/* ==========================================
    FOOTER
 ========================================== */
 
 .footer {
 
-  width:
-    min(
-      900px,
-      calc(100% - 36px)
-    );
+  max-width:900px;
 
   margin:
-    48px auto 0;
+    clamp(48px,7vw,76px)
+    auto 0;
 
   padding-top:20px;
 
@@ -604,7 +724,7 @@ h1 {
 
 @media(max-width:560px) {
 
-  .hero {
+  .page {
 
     width:
       min(
@@ -616,9 +736,17 @@ h1 {
   }
 
 
-  .got10-logo {
+  .logo {
 
-    width:210px;
+    width:96px;
+
+    margin-bottom:22px;
+  }
+
+
+  .eyebrow {
+
+    font-size:1.05rem;
   }
 
 
@@ -633,10 +761,9 @@ h1 {
   }
 
 
-  .content-section {
+  .thank-you {
 
-    padding-left:12px;
-    padding-right:12px;
+    margin-top:22px;
   }
 
 
@@ -655,13 +782,6 @@ h1 {
     padding:
       28px 24px
       30px;
-  }
-
-
-  .gift-copy h2 {
-
-    font-size:
-      1.5rem;
   }
 
 
@@ -696,85 +816,127 @@ h1 {
 
 </head>
 
-
 <body>
 
-
-<!-- ==========================================
-     TOP LOGO / THANK YOU SECTION
-========================================== -->
-
-<section class="hero-band">
-
+<main class="page">
 
 <header class="hero">
 
-
-<!--
-  GOT 10 MINUTES LOGO
-
-  Embedded directly in the HTML.
-  No image upload is required.
--->
+<!-- ==========================================
+     GROW WELL SG LOGO
+========================================== -->
 
 <img
-  class="got10-logo"
-  alt="Got 10 Minutes"
-  src="data:image/webp;base64,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"
+class="logo"
+alt="Grow Well SG logo"
+src="https://ch-api.healthhub.sg/api/public/content/24908b7d99c6494b8bfec7da596157c6?v=d7bd063e"
+
+
+
+<p class="eyebrow">
+  GOT 10 MINUTES? LET’S GROW WELL TOGETHER!
+</p>
+
+<h1>
+  Thank you for your feedback
+</h1>
+
+<p class="discover-copy">
+
+Got 10 minutes? Here’s a short story that you xxxx. -	For more ’10-minutes activities’ ideas, please click here or visit us at
+
+<a
+href="https://go.gov.sg/grow-well-sg-main-page"
+target="_blank"
+rel="noopener noreferrer"
+
+
+
+Parent Hub.
+
+  </a>
+
+
+
+</header>
+
+
+
+<!-- ==========================================
+     E-BOOK / TOKEN CARD
+========================================== -->
+
+<section
+  class="gift-card"
+  aria-label="Redeem your Grow Well SG e-book"
 >
+
+<!-- ==========================================
+     BOOK COVER
+
+     The image itself is also clickable.
+     It is embedded directly into this HTML so
+     no separate image upload is required.
+========================================== -->
+
+<div class="book-side">
+
+<a
+class="book-link"
+href="https://go.gov.sg/e-book"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="Download the No screen use during meal times and before bed e-book"
+
+
+
+<img
+class="book-cover"
+alt="No screen use during meal times and before bed e-book cover"
+src="data/webp;base64,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"
+
 
 
 </a>
 
-
 <div class="book-tag">
-
   YOUR E-BOOK
-
 </div>
-
 
 </div>
 
 
 
 <!-- ==========================================
-     STORY + DOWNLOAD
+     TEXT + DOWNLOAD
 ========================================== -->
 
 <div class="gift-copy">
 
 
+
 <h2>
-
   A short story to read together
-
 </h2>
-
 
 <p class="story-copy">
 
-  Here’s a short story you can read with your child
-  to start a conversation about healthier screen habits
-  during mealtimes and before bed.
+Here’s a short story you can read with your child
+to start a conversation about healthier screen habits
+during mealtimes and before bed.
 
 </p>
 
-
 <a
-  class="download-button"
-  href="https://go.gov.sg/e-book"
-  target="_blank"
-  rel="noopener noreferrer"
->
+class="download-button"
+href="https://go.gov.sg/e-book"
+target="_blank"
+rel="noopener noreferrer"
 
-  DOWNLOAD THE E-BOOK
 
+
+DOWNLOAD THE E-BOOK
 </a>
-
-
-</div>
-
 
 </section>
 
@@ -782,13 +944,11 @@ h1 {
 
 <footer class="footer">
 
-  Grow Well SG resource gateway for event participants
+Grow Well SG resource gateway for event participants
 
 </footer>
 
-
-</section>
-
+</main>
 
 </body>
 
